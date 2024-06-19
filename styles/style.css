@@ -258,32 +258,80 @@ nav ul {
 }
 
 .gallerysection {
+  width: 100%;
   position: relative;
-  background-image: url(../resources/desktop/gallery.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
 }
 
-.gallery {
+.gallery__slide {
+  display: none;
   width: 100%;
-  max-width: 1150px;
-  height: 717px;
+}
+
+.gallery__img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .gallerytitle {
   position: absolute;
-  top: 64px;
+  top: 9%;
+  left: 9%;
+  font-size: 22px;
+  line-height: 30.05px;
   color: white;
 }
 
 .gallery__projectsname {
   position: absolute;
-  bottom: 60px;
+  bottom: 9%;
+  left: 9%;
   max-width: 443px;
+  min-height: 82px;
   font-size: 30px;
   line-height: 40.98px;
   color: white;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  left: 8%;
+  bottom: 21%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  left: 11%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 .contactstitle {
@@ -371,7 +419,6 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .gallery,
   .contacts {
     width: 100%;
     margin-bottom: 120px;
@@ -412,7 +459,60 @@ nav ul {
   }
 
   .gallerysection {
-    height: 636px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .gallery__slide {
+    display: none;
+    width: 100%;
+    height: 717px;
+  }
+  
+  .gallery__img {
+    object-fit: cover;
+    width: 100%;
+    height: 717px;
+  }
+  
+  .gallerytitle {
+    position: absolute;
+    top: 9%;
+    left: 9%;
+    font-size: 22px;
+    line-height: 30.05px;
+    color: white;
+  }
+  
+  .gallery__projectsname {
+    position: absolute;
+    bottom: 9%;
+    left: 9%;
+    max-width: 377px;
+    font-size: 26px;
+    line-height: 40.98px;
+    color: white;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    left: 8%;
+    bottom: 24%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    left: 12%;
+    border-radius: 3px 0 0 3px;
   }
 
   .contacts__contact-mail {
@@ -433,7 +533,6 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .gallery,
   .contacts {
     width: 100%;
     padding: 0 12px;
@@ -518,18 +617,60 @@ nav ul {
   }
 
   .gallerysection {
+    width: 100%;
+    position: relative;
+    height: 536px;
+  }
+  
+  .gallery__slide {
+    display: none;
+    width: 100%;
+    height: 536px;
+  }
+  
+  .gallery__img {
+    object-fit: cover;
+    width: 100%;
     height: 536px;
   }
   
   .gallerytitle {
-    padding-left: 35px;
+    position: absolute;
+    top: 9%;
+    left: 9%;
+    font-size: 22px;
+    line-height: 30.05px;
+    color: white;
+  }
+  
+  .gallery__projectsname {
+    position: absolute;
+    bottom: 9%;
+    left: 7%;
+    max-width: 287px;
+    font-size: 20px;
+    line-height: 27.98px;
+    color: white;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    left: 6%;
+    bottom: 29%;
+    width: auto;
+    padding: 8px;
+    margin-top: -22px;
+    color: white;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
   }
 
-  .gallery__projectsname {
-    padding-left: 35px;
-    max-width: 377px;
-    font-size: 25px;
-    line-height: 34.15px;
+  .next {
+    left: 10%;
+    border-radius: 3px 0 0 3px;
   }
 
   .contactstitle {
@@ -561,7 +702,6 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .gallery,
   .contacts {
     width: 100%;
     margin-bottom: 80px;
@@ -622,18 +762,62 @@ nav ul {
   }
 
   .gallerysection {
-    height: 536px;
+    width: 100%;
+    position: relative;
+    height: 408px;
   }
-
+  
+  .gallery__slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .gallery__img {
+    object-fit: cover;
+    width: 100%;
+    height: 408px;
+  }
+  
   .gallerytitle {
-    padding-left: 15px;
+    position: absolute;
+    top: 9%;
+    left: 9%;
+    font-size: 14px;
+    line-height: 19.12px;
+    color: white;
   }
-
+  
   .gallery__projectsname {
-    padding-left: 35px;
-    max-width: 377px;
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    max-width: 287px;
     font-size: 19px;
     line-height: 25.97px;
+    color: white;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: auto;
+    width: auto;
+    padding: 16px;
+    margin: 0;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
 
   .contactstitle {
@@ -686,7 +870,6 @@ nav ul {
   .about,
   .projects,
   .reviews,
-  .gallery,
   .contacts {
     width: 100%;
     margin-bottom: 80px;
@@ -825,13 +1008,63 @@ nav ul {
   }
 
   .gallerysection {
+    width: 100%;
+    position: relative;
+    height: 408px;
+    min-width: 375px;
+  }
+  
+  .gallery__slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .gallery__img {
+    object-fit: cover;
+    width: 100%;
     height: 408px;
   }
-
+  
+  .gallerytitle {
+    position: absolute;
+    top: 9%;
+    left: 9%;
+    font-size: 14px;
+    line-height: 19.12px;
+    color: white;
+  }
+  
   .gallery__projectsname {
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
     max-width: 287px;
     font-size: 19px;
     line-height: 25.97px;
+    color: white;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: auto;
+    width: auto;
+    padding: 16px;
+    margin: 0;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
 
   .contactstitle {
