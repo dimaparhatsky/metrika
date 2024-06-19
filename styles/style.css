@@ -67,7 +67,9 @@ nav ul {
   .titleblock,
   .about,
   .projects,
-  .services {
+  .services,
+  .reviews,
+  .contacts {
     margin-bottom: 150px;
     width: 100%;
     max-width: 1150px;
@@ -225,11 +227,152 @@ nav ul {
   color: white;
 }
 
+.reviewssection {
+  padding-top: 150px;
+}
+
+.reviews__wrapper  {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  column-gap: 50px;
+  justify-content: space-between;
+}
+
+.reviews__review {
+  flex-grow: 1;
+  width: calc(50% - 25px);
+}
+
+.reviews__review-name {
+  margin-bottom: 14px;
+  font-size: 45px;
+  line-height: 61.47px;
+}
+
+.reviews__review-about {
+  max-width: 861px;
+  min-width: 530px;
+  font-size: 22px;
+  line-height: 30.05px;
+}
+
+.gallerysection {
+  position: relative;
+  background-image: url(../resources/desktop/gallery.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 1150px;
+  height: 717px;
+}
+
+.gallerytitle {
+  position: absolute;
+  top: 64px;
+  color: white;
+}
+
+.gallery__projectsname {
+  position: absolute;
+  bottom: 60px;
+  max-width: 443px;
+  font-size: 30px;
+  line-height: 40.98px;
+  color: white;
+}
+
+.contactstitle {
+  margin-bottom: 74px;
+  padding-top: 150px;
+}
+
+.contacts-wrapper {
+  display: flex;
+  column-gap: 104px;
+}
+
+.contacts__contact-mail {
+  position: relative;
+  font-size: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #121212;
+}
+
+.contacts__contact-mail:before {
+  content: url(../resources/material-symbols_mail-outline-rounded.png);
+  position: absolute;
+  top: -76px;
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__contact-phone {
+  position: relative;
+  font-size: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #121212;
+}
+
+.contacts__contact-phone:before {
+  content: url(../resources/ic_outline-phone-iphone.png);
+  position: absolute;
+  top: -76px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  background-color: #121212;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 55px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 87px;
+  padding-top: 60px;
+  width: 450px;
+}
+
+.footer__nav-link {
+  font-size: 18px;
+  line-height: 24.59px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__nav-link:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.footer__name {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 27.32px;
+  color: gray;
+}
+
+
 @media (max-width: 1149px) and (min-width: 961px) {
   .titleblock,
   .about,
   .projects,
-  .services {
+  .services,
+  .reviews,
+  .gallery,
+  .contacts {
     width: 100%;
     margin-bottom: 120px;
     padding: 0 15px;
@@ -246,13 +389,52 @@ nav ul {
     line-height: 47.81px;
   }
 
+  .reviews__wrapper {
+    column-gap: 10px;
+  }
+
+  .reviews__review {
+    width: 45%;
+  }
+  
+  .reviews__review-name {
+    margin-bottom: 14px;
+    font-size: 35px;
+    line-height: 47.81px;
+  }
+  
+  .reviews__review-about {
+    max-width: fit-content;
+    min-width: fit-content;
+    width: 100%;
+    font-size: 20px;
+    line-height: 27.32px;
+  }
+
+  .gallerysection {
+    height: 636px;
+  }
+
+  .contacts__contact-mail {
+    font-size: 52px;
+    line-height: 52px;
+  }
+
+  .contacts__contact-phone {
+    font-size: 52px;
+    line-height: 52px;
+  }
+
 }
 
 @media (max-width: 960px) and (min-width: 768px) {
   .titleblock,
   .about,
   .projects,
-  .services {
+  .services,
+  .reviews,
+  .gallery,
+  .contacts {
     width: 100%;
     padding: 0 12px;
   }
@@ -274,8 +456,8 @@ nav ul {
 
   .title {
     margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 19.12px;
+    font-size: 18px;
+    line-height: 24.59px;
   }
 
   .about__description {
@@ -309,6 +491,65 @@ nav ul {
     line-height: 27.32px;
   }
 
+  .reviewssection {
+    padding-top: 120px;
+  }
+
+  .reviews__wrapper {
+    column-gap: 10px;
+  }
+
+  .reviews__review {
+    width: 45%;
+  }
+  
+  .reviews__review-name {
+    margin-bottom: 25px;
+    font-size: 35px;
+    line-height: 47.81px;
+  }
+  
+  .reviews__review-about {
+    max-width: fit-content;
+    min-width: fit-content;
+    width: 100%;
+    font-size: 20px;
+    line-height: 27.32px;
+  }
+
+  .gallerysection {
+    height: 536px;
+  }
+  
+  .gallerytitle {
+    padding-left: 35px;
+  }
+
+  .gallery__projectsname {
+    padding-left: 35px;
+    max-width: 377px;
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+
+  .contactstitle {
+    margin-bottom: 74px;
+  }
+
+  .contacts-wrapper {
+    column-gap: 65px;
+  }
+
+  .contacts__contact-mail {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  .contacts__contact-phone {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
   
 
 }
@@ -318,10 +559,19 @@ nav ul {
   .titleblock,
   .about,
   .projects,
-  .services {
+  .services,
+  .reviews,
+  .gallery,
+  .contacts {
     width: 100%;
     margin-bottom: 80px;
     padding: 0 12px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 19.12px;
   }
 
   .services__wrapper {
@@ -343,12 +593,101 @@ nav ul {
   .servicetitle {
     padding-top: 80px;
   }
+
+  .reviewssection {
+    padding-top: 80px;
+  }
+
+  .reviews__wrapper {
+    flex-direction: column;
+    column-gap: 10px;
+  }
+
+  .reviews__review {
+    width: 100%;
+  }
+  
+  .reviews__review-name {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+  
+  .reviews__review-about {
+    max-width: fit-content;
+    min-width: fit-content;
+    width: 100%;
+    font-size: 16px;
+    line-height: 21.86px;
+  }
+
+  .gallerysection {
+    height: 536px;
+  }
+
+  .gallerytitle {
+    padding-left: 15px;
+  }
+
+  .gallery__projectsname {
+    padding-left: 35px;
+    max-width: 377px;
+    font-size: 19px;
+    line-height: 25.97px;
+  }
+
+  .contactstitle {
+    margin-bottom: 58px;
+  }
+
+  .contacts-wrapper {
+    flex-direction: column;
+    gap: 58px;
+  }
+
+  .contacts__contact-mail {
+    font-size: 40px;
+    line-height: 45.62px;
+  }
+
+  .contacts__contact-mail:before {
+    top: -50px;
+  }
+
+  .contacts__contact-phone {
+    font-size: 40px;
+    line-height: 45.62px;
+  }
+
+  .contacts__contact-phone:before {
+    top: -50px;
+  }
+
+  .footer__nav {
+    margin-bottom: 41px;
+    padding-top: 30px;
+    width: 281px;
+  }
+
+  .footer__nav-link {
+    font-size: 12px;
+    line-height: 16.39px;
+  }
+
+  .footer__name {
+    margin-bottom: 26px;  
+    font-size: 13px;
+    line-height: 17.76px;
+  }
 }
 
 @media (max-width: 500px) {
   .titleblock,
   .about,
-  .projects {
+  .projects,
+  .reviews,
+  .gallery,
+  .contacts {
     width: 100%;
     margin-bottom: 80px;
     padding: 0 12px;
@@ -456,6 +795,97 @@ nav ul {
 
   .servicetitle {
     padding-top: 80px;
+  }
+
+  .reviewssection {
+    padding-top: 80px;
+  }
+
+  .reviews__wrapper {
+    flex-direction: column;
+    column-gap: 10px;
+  }
+
+  .reviews__review {
+    width: 100%;
+  }
+  
+  .reviews__review-name {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+  
+  .reviews__review-about {
+    max-width: fit-content;
+    min-width: fit-content;
+    width: 100%;
+    font-size: 16px;
+    line-height: 21.86px;
+  }
+
+  .gallerysection {
+    height: 408px;
+  }
+
+  .gallery__projectsname {
+    max-width: 287px;
+    font-size: 19px;
+    line-height: 25.97px;
+  }
+
+  .contactstitle {
+    margin-bottom: 58px;
+  }
+
+  .contacts-wrapper {
+    flex-direction: column;
+    gap: 58px;
+  }
+
+  .contacts__contact-mail {
+    position: relative;
+    font-size: 35px;
+    line-height: 45.62px;
+  }
+
+  .contacts__contact-mail:before {
+    content: url(../resources/material-symbols_mail-outline-rounded18px.png);
+    position: absolute;
+    top: -45px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .contacts__contact-phone {
+    position: relative;
+    font-size: 35px;
+    line-height: 45.62px;
+  }
+
+  .contacts__contact-phone:before {
+    content: url(../resources/ic_outline-phone-iphone18px.png);
+    position: absolute;
+    top: -45px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer__nav {
+    margin-bottom: 41px;
+    padding-top: 30px;
+    width: 281px;
+  }
+
+  .footer__nav-link {
+    font-size: 12px;
+    line-height: 16.39px;
+  }
+
+  .footer__name {
+    margin-bottom: 26px;
+    font-size: 13px;
+    line-height: 17.76px;
   }
 
 }
