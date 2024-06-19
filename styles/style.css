@@ -87,7 +87,7 @@ nav ul {
   position: relative;
   width: 100%;
   height: 500px;
-  background-image: url(./resources/desktop/headinterior.png);
+  background-image: url(../resources/desktop/headinterior.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25%;
@@ -259,7 +259,7 @@ nav ul {
 
 .gallerysection {
   position: relative;
-  background-image: url(./resources/desktop/gallery.png);
+  background-image: url(../resources/desktop/gallery.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -305,7 +305,7 @@ nav ul {
 }
 
 .contacts__contact-mail:before {
-  content: url(./resources/material-symbols_mail-outline-rounded.png);
+  content: url(../resources/material-symbols_mail-outline-rounded.png);
   position: absolute;
   top: -76px;
   width: 24px;
@@ -321,7 +321,7 @@ nav ul {
 }
 
 .contacts__contact-phone:before {
-  content: url(./resources/ic_outline-phone-iphone.png);
+  content: url(../resources/ic_outline-phone-iphone.png);
   position: absolute;
   top: -76px;
   width: 24px;
@@ -850,7 +850,7 @@ nav ul {
   }
 
   .contacts__contact-mail:before {
-    content: url(./resources/material-symbols_mail-outline-rounded18px.png);
+    content: url(../resources/material-symbols_mail-outline-rounded18px.png);
     position: absolute;
     top: -45px;
     width: 18px;
@@ -864,7 +864,7 @@ nav ul {
   }
 
   .contacts__contact-phone:before {
-    content: url(./resources/ic_outline-phone-iphone18px.png);
+    content: url(../resources/ic_outline-phone-iphone18px.png);
     position: absolute;
     top: -45px;
     width: 18px;
