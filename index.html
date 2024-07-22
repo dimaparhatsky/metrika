@@ -19,7 +19,8 @@
         <section class="navigation">
             <div class="container">
                 <a href="/" class="logo"><img src="resources/logo.png" alt="логотип"></a>
-                <nav>
+                <button class="js-burger-btn burger-btn"></button>
+                <nav class="navigation__links">
                     <ul>
                         <li><a href="http://">О НАС</a></li>
                         <li><a href="http://">ПРОЕКТЫ</a></li>
@@ -101,7 +102,20 @@
                             <p class="services__price">5% от стоимости</p>
                         </div>
                     </div>
-                    <a href="/" class="services__btn">Заказать услугу</a>
+                    <button class="services__btn js-btn">Заказать услугу</button>
+                </div>
+                <div class="popup js-popup">
+                    <div class="js-popup__content popup__content">
+                        <p class="popup__title">Заказать услугу</p>
+                        <p class="popup__subtitle">Заполните форму, мы свяжемся с вами в течение суток</p>
+                        <input type="text" class="input" placeholder="Имя">
+                        <input type="text" class="input" placeholder="Электронная почта">
+                        <input type="text" class="input" placeholder="Номер телефона">
+                        <button class="btn-send">Отправить</button>
+                        <div class="js-popup__close-btn popup__close-btn"></div>
+
+                    </div>
+
                 </div>
             </div>
         </section> 
@@ -173,6 +187,24 @@
             <p class="footer__name">студия дизайна интерьера Метрика — 2023</p>
         </div>
     </footer>
+
+    <div class="js-burger burger">
+        <div class="js-burger__content burger__content">
+            <a href="/" class="logo"><img src="resources/logo.png" alt="логотип"></a>
+            <ul class="burger__menu">
+                <li><a href="http://" class="burger__text">О НАС</a></li>
+                <li><a href="http://" class="burger__text">ПРОЕКТЫ</a></li>
+                <li><a href="http://" class="burger__text">УСЛУГИ</a></li>
+                <li><a href="http://" class="burger__text">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="feedback-text">для связи:</div>
+            <a href="tel:+79358954535" class="burger__contact">+7 935 895-45-35</a>
+            <a href="mailto:hello@mail.ru" class="burger__contact">hello@mail.ru</a>
+        </div>
+    </div>
+
     <script src="gallery.js"></script>
+    <script src="popup.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

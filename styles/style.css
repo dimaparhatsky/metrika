@@ -9,6 +9,10 @@ body {
   letter-spacing: -0.03em;
 }
 
+.body_fixed {
+  overflow: hidden;
+}
+
 header {
   margin-bottom: 70px;
 }
@@ -30,6 +34,7 @@ section {
 }
 
 .logo {
+    display: block;
     float: left;
     height: 23px;
 }
@@ -57,6 +62,86 @@ nav ul {
   nav a:hover {
     text-decoration: underline;
     color: gray;
+  }
+
+  .burger-btn {
+    display: none;
+    position: absolute;
+    right: 15px;
+    z-index: 100;
+    margin-left: auto;
+    background-image: url(../resources/burger.png);
+    height: 10px;
+    width: 40px;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+
+  .burger-btn_open {
+    background-image: url(../resources/radix-icons_cross-2.png);
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+  }
+
+  .burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .burger_open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .burger__content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 80px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+  }
+
+  .burger__menu {
+    padding-top: 50px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+
+  .burger__text {
+    font-size: 25px;
+    line-height: 34px;
+    text-decoration: none;
+    color: #121212;
+  }
+
+  .feedback-text {
+    font-size: 16px;
+    line-height: 21.86px;
+    color: gray;
+  }
+
+  .burger__contact {
+    font-size: 20px;
+    line-height: 45.62px;
+    text-decoration: none;
+    color: #121212;
   }
 
 
@@ -224,6 +309,95 @@ nav ul {
   font-size: 30px;
   line-height: 40.98px;
   text-decoration: none;
+  color: white;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__content {
+  position: relative;
+  padding-bottom: 86px;
+  width: 777px;
+  max-height: 100%;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.popup__close-btn {
+  position: absolute;
+  right: 34px;
+  top: 32px;
+  width: 50px;
+  height: 50px;
+  background-image: url(../resources/radix-icons_cross-2.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.popup__title {
+  margin-bottom: 4px;
+  padding-top: 94px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 61.47px;
+  color: #121212;
+}
+
+.popup__subtitle {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24.59px;
+  color: #121212;
+}
+
+.input {
+  display: block;
+  width: 80%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  margin: 0 auto;
+  margin-bottom: 40px;
+  height: 54px;
+  font-size: 25px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn-send {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #AD1818;
+  width: 80%;
+  padding: 20px 0;
+  font-size: 20px;
+  line-height: 27.32px;
   color: white;
 }
 
@@ -419,7 +593,8 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .contacts {
+  .contacts,
+  .navigation {
     width: 100%;
     margin-bottom: 120px;
     padding: 0 15px;
@@ -533,9 +708,18 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .contacts {
+  .contacts,
+  .navigation {
     width: 100%;
     padding: 0 12px;
+  }
+
+  .navigation__links {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
   }
 
   .titleblock__header {
@@ -702,10 +886,19 @@ nav ul {
   .projects,
   .services,
   .reviews,
-  .contacts {
+  .contacts,
+  .navigation {
     width: 100%;
     margin-bottom: 80px;
     padding: 0 12px;
+  }
+
+  .navigation__links {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
   }
 
   .title {
@@ -732,6 +925,26 @@ nav ul {
 
   .servicetitle {
     padding-top: 80px;
+  }
+
+  .popup {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .popup__content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .popup__title {
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+
+  .input {
+    font-size: 18px;
+    line-height: 24.59px;
   }
 
   .reviewssection {
@@ -870,10 +1083,19 @@ nav ul {
   .about,
   .projects,
   .reviews,
-  .contacts {
+  .contacts,
+  .navigation {
     width: 100%;
     margin-bottom: 80px;
     padding: 0 12px;
+  }
+
+  .navigation__links {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
   }
 
   .services {
@@ -978,6 +1200,62 @@ nav ul {
 
   .servicetitle {
     padding-top: 80px;
+  }
+
+  .popup {
+    width: 100%;
+    padding: 0 7px;
+  }
+
+  .popup__content {
+    max-width: 100%;
+    padding-bottom: 80px;
+  }
+
+  .popup__title {
+    padding-top: 80px;
+    margin-bottom: 11px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 34.15px;
+  }
+
+  .popup__subtitle {
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    font-size: 14px;
+    line-height: 19.12px;
+  };
+
+  .btn-send {
+    font-size: 20px;
+    line-height: 27.32px;
+    max-width: 100%;
+    padding: 20px 120px;
+    color: white;
+  }
+
+  .popup__close-btn {
+    top: 41px;
+    right: 29px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .popup__subtitle {
+    margin-bottom: 60px;
+  }
+
+  .input {
+    margin-bottom: 30px;
+    height: 45px;
+    font-size: 18px;
+    line-height: 24.59px;
+  }
+
+  .input:nth-last-child(3) {
+    margin-bottom: 60px;
   }
 
   .reviewssection {
